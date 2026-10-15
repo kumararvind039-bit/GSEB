@@ -1,0 +1,21 @@
+boardprep-ai/
+├── public/                      # Static assets & PWA icons
+├── src/
+│   ├── api/
+│   │   └── geminiClient.js      # Dynamic client initializer using stored API key
+│   ├── components/              # Reusable UI & Feature components
+│   │   ├── Auth.jsx             # Supabase Auth (for test scores sync)
+│   │   ├── ApiKeySettings.jsx   # Modal/Settings view to input & store Gemini API Key
+│   │   ├── MockTestEngine.jsx   # Timed assessments synced with Supabase
+│   │   ├── Navbar.jsx           # Global header including API key status badge
+│   │   └── SocraticChat.jsx     # AI tutor widget powered by user's own key
+│   ├── context/
+│   │   ├── BoardContext.jsx     # CBSE, ICSE, GSEB configuration
+│   │   └── ApiKeyContext.jsx    # Manages BYOK state across components
+│   ├── App.jsx                  # Root layout & orchestration
+│   ├── main.jsx                 # React entry renderer
+│   ├── supabaseClient.js        # Supabase client (used only for profile/scores)
+│   └── index.css                # Tailwind CSS imports
+├── .env                         # ONLY contains Supabase keys (No hardcoded AI keys)
+├── package.json                 # Dependencies (includes @google/genai, @supabase/supabase-js)
+└── vite.config.js               # Vite bundler settings
